@@ -1,0 +1,569 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --dark-blue: #1A1D2B; /* Main background */
+    --text-color: #E0E0E0; /* General text color */
+    --light-blue: #6699ff; /* Accent blue for logo/icons */
+    --primary-button-bg: #2B59C3; /* Get Started button background */
+    --primary-button-hover: #1f4299;
+    --secondary-button-bg: #333649; /* Live Demo button background */
+    --secondary-button-hover: #292b3a;
+    --nav-link-hover: #999999;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--dark-blue);
+    color: var(--text-color);
+}
+
+.hero-section {
+    width: 100%;
+    background-color: var(--dark-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 5%; /* Padding for sides */
+}
+
+.navbar {
+    width: 100%;
+    max-width: 1200px; /* Max width for content */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+}
+
+.logo i {
+    color: var(--light-blue);
+    margin-right: 8px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--nav-link-hover);
+}
+
+.hero-content {
+    flex-grow: 1; /* Allows content to take up remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: white; /* Slightly brighter for the main heading */
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    max-width: 600px;
+    color: var(--text-color);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn i {
+    margin-right: 10px;
+}
+
+.btn-primary {
+    background-color: var(--primary-button-bg);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-button-hover);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-button-bg);
+    color: var(--text-color);
+    border: 1px solid var(--secondary-button-bg); /* Or a slightly lighter border */
+}
+
+.btn-secondary:hover {
+    background-color: var(--secondary-button-hover);
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+/* @media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        margin-top: 15px;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn {
+        width: 80%; /* Make buttons wider on small screens */
+        /* justify-content: center; */
+    /* } */
+/* } */
+
+/* @media (max-width: 480px) { */
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 12px 25px;
+    }
+/* }  */
+.section{
+    background-color: #fff;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.img-1{
+    position: relative;
+    top: 120px;
+}
+.section h2{
+    color: black;
+}
+.section p{
+    color: #333649;
+}
+
+
+/* Outer container for the three items */
+.flex-container-outer {
+    display: flex; /* Makes the items arrange horizontally */
+    justify-content: space-evenly; /* Distributes space evenly */
+    align-items: flex-start; /* Aligns items to the top (important for vertical alignment within the row) */
+    gap: 60px; /* Space between the columns */
+    padding: 40px; /* Some padding around the whole section */
+    background-color: #fff; /* White background as in the image */
+}
+
+/* Wrapper for each individual item (icon, title, description) */
+.flex-item-wrapper {
+    display: flex;
+    flex-direction: column; /* Stacks icon, title, description vertically */
+    align-items: center; /* Centers content horizontally within each item */
+    text-align: center; /* Centers text */
+    flex: 1; /* Allows items to grow and shrink, distributing space */
+    max-width: 300px; /* Optional: Sets a max width for each item to prevent over-stretching */
+    padding: 20px;
+}
+
+/* Icon styling */
+.icon-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #3f87f5; /* Blue color from the image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Placeholder for the actual icons - you'd replace these with SVG or font icons */
+.icon-code::before,
+.icon-phone::before,
+.icon-js::before {
+    font-family: 'Font Awesome 5 Free'; /* Example: using Font Awesome */
+    font-weight: 900;
+    color: #fff; /* White icon color */
+    font-size: 36px;
+}
+
+.icon-code::before {
+    content: '\f121'; /* Example: Font Awesome code icon */
+}
+
+.icon-phone::before {
+    content: '\f3cd'; /* Example: Font Awesome mobile-alt icon */
+}
+
+.icon-js::before {
+    content: 'JS'; /* For the 'JS' icon, you might just use text if not an icon font */
+    font-family: sans-serif; /* Fallback to a generic font for 'JS' */
+    font-weight: bold;
+}
+
+
+/* Title styling */
+.title {
+    font-size: 24px;
+    color: #333; /* Dark gray for title */
+    margin-bottom: 10px;
+    font-weight: 600; /* Slightly bold */
+}
+
+/* Description styling */
+.description {
+    font-size: 16px;
+    color: #666; /* Lighter gray for description */
+    line-height: 1.6;
+}
+/* Main section container */
+.how-it-works-section {
+    background-color: #1a2a6b; /* Dark blue background */
+    padding: 80px 40px; /* Top/bottom padding and left/right padding */
+    display: flex;
+    flex-direction: column; /* Stack the heading and the cards vertically */
+    align-items: center; /* Center content horizontally */
+    transform: skewx(-5deg);
+}
+
+/* Section heading */
+.how-it-works-section h2 {
+    color: #fff; /* White text color */
+    font-size: 36px;
+    margin-bottom: 50px; /* Space below the heading */
+    text-align: center;
+    font-weight: 600; /* Medium-bold */
+}
+
+/* Container for the three cards */
+.how-it-works-cards-container {
+    display: flex;
+    flex-direction: row; /* Arrange cards horizontally */
+    justify-content: center; /* Center the cards if they don't fill the space */
+    gap: 30px; /* Space between the cards */
+    flex-wrap: wrap; /* Allow cards to wrap to the next line on smaller screens */
+    max-width: 1200px; /* Max width to control how wide the row gets */
+    width: 100%; /* Ensure it takes full width within its max-width */
+}
+
+/* Styling for each individual card */
+.how-it-works-card {
+    background-color: #2a3d7b; /* Slightly lighter blue for card background */
+    padding: 30px;
+    border-radius: 8px; /* Slightly rounded corners */
+    display: flex;
+    flex-direction: column; /* Stack icon, title, description vertically */
+    align-items: flex-start; /* Align content to the left within the card */
+    flex: 1; /* Allows cards to grow and shrink, distributing space */
+    min-width: 280px; /* Minimum width for cards before wrapping */
+    max-width: 380px; /* Max width for each card */
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+/* Icon styling */
+.how-it-works-card .card-icon {
+    font-size: 48px; /* Icon size */
+    color: #8cafff; /* Lighter blue/purple for icons */
+    margin-bottom: 20px;
+}
+
+/* Card title (e.g., "1. Get your custom dashboard") */
+.how-it-works-card h3 {
+    color: #fff; /* White text color */
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-weight: 600; /* Medium-bold */
+}
+
+/* Card description */
+.how-it-works-card p {
+    color: #b0c4de; /* Lighter gray-blue for description */
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Font Awesome Placeholder for Icons - YOU NEED TO INCLUDE FONT AWESOME IN YOUR HTML HEAD */
+/* Example: <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> */
+.fa-desktop::before { content: '\f108'; } /* Desktop icon */
+.fa-cube::before { content: '\f1b2'; }   /* Cube icon (for social networks) */
+.fa-pen-to-square::before { content: '\f044'; } /* Pen to square icon (for post content) */
+
+/* If you don't use Font Awesome, you'd replace the <i> tags with SVGs or other image types */
+/* Main section container */
+.pricing-section {
+    background-color: #fff; /* White background */
+    padding: 80px 20px; /* Top/bottom padding and left/right padding */
+    display: flex;
+    flex-direction: column; /* Stack the heading and the pricing cards vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+/* Section heading */
+.pricing-section h2 {
+    color: #333; /* Dark gray for heading */
+    font-size: 38px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 700; /* Bold */
+}
+
+/* Section subheading/description */
+.pricing-section p {
+    color: #666; /* Lighter gray for description */
+    font-size: 18px;
+    margin-bottom: 60px; /* Space below the description */
+    text-align: center;
+    max-width: 600px; /* Limit width for readability */
+    line-height: 1.6;
+}
+
+/* Container for the two pricing cards */
+.pricing-cards-container {
+    display: flex;
+    flex-direction: row; /* Arrange cards horizontally */
+    justify-content: center; /* Center the cards if they don't fill the space */
+    align-items: flex-start; /* Align cards to the top, useful if heights differ slightly */
+    gap: 40px; /* Space between the cards */
+    flex-wrap: wrap; /* Allow cards to wrap to the next line on smaller screens */
+    max-width: 900px; /* Max width to control how wide the row gets */
+    width: 100%; /* Ensure it takes full width within its max-width */
+}
+
+/* Styling for each individual pricing card */
+.pricing-card {
+    background-color: #fff; /* White background for the card itself */
+    border: 1px solid #eee; /* Light gray border for non-highlighted card */
+    border-radius: 10px; /* Rounded corners */
+    padding: 30px;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: flex-start; /* Align content to the left within the card */
+    flex: 1; /* Allows cards to grow and shrink */
+    min-width: 300px; /* Minimum width for cards before wrapping */
+    max-width: 400px; /* Max width for each card */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+    position: relative; /* For the 'AGENCY' badge positioning */
+}
+
+/* Specific styling for the highlighted 'AGENCY' card */
+.pricing-card.highlighted {
+    border-color: #3f87f5; /* Blue border for the highlighted card */
+    box-shadow: 0 8px 20px rgba(63, 135, 245, 0.2); /* More prominent blue shadow */
+}
+
+/* Plan type (e.g., DEVELOPER, AGENCY) */
+.pricing-card .plan-type {
+    font-size: 14px;
+    font-weight: bold;
+    color: #3f87f5; /* Blue color for plan type */
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+/* Price styling */
+.pricing-card .price {
+    font-size: 48px;
+    font-weight: bold;
+    color: #333; /* Dark gray for price */
+    margin-bottom: 5px;
+}
+
+/* Per year text */
+.pricing-card .price-per-year {
+    font-size: 16px;
+    color: #666; /* Lighter gray */
+    margin-bottom: 30px;
+}
+
+/* Features list - assumed to be a paragraph for simplicity */
+.pricing-card .features {
+    font-size: 16px;
+    color: #666; /* Lighter gray */
+    line-height: 1.5;
+    margin-bottom: 40px;
+}
+
+/* Get Started Button */
+.pricing-card .get-started-btn {
+    display: block; /* Makes the button take full width */
+    width: 100%; /* Full width within its parent */
+    padding: 15px 25px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none; /* Remove underline for links */
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Default button for 'DEVELOPER' */
+.pricing-card .get-started-btn.default-btn {
+    background-color: #343a40; /* Dark gray */
+    color: #fff;
+    border: 1px solid #343a40;
+}
+
+.pricing-card .get-started-btn.default-btn:hover {
+    background-color: #212529;
+    border-color: #212529;
+}
+
+/* Highlighted button for 'AGENCY' */
+.pricing-card .get-started-btn.highlighted-btn {
+    background-color: #3f87f5; /* Blue */
+    color: #fff;
+    border: 1px solid #3f87f5;
+}
+
+.pricing-card .get-started-btn.highlighted-btn:hover {
+    background-color: #2b70d4;
+    border-color: #2b70d4;
+}
+
+/* Badge for 'AGENCY' card */
+.pricing-card .badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 40px 40px 0; /* Creates the triangle shape */
+    border-color: transparent #3f87f5 transparent transparent; /* Blue triangle */
+    border-top-right-radius: 10px; /* Matches card corner */
+}
+/* Main section container for the stats */
+.stats-section {
+    background-color: #101828; /* Dark blue background */
+    padding: 80px 20px; /* Top/bottom padding and left/right padding */
+    display: flex;
+    flex-direction: row; /* Arrange the stat items horizontally */
+    justify-content: space-around; /* Distribute space evenly around items */
+    align-items: center; /* Center items vertically */
+    gap: 20px; /* Space between the stat columns */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+/* Styling for each individual stat item */
+.stat-item {
+    display: flex;
+    flex-direction: column; /* Stack the number and text vertically */
+    align-items: center; /* Center content horizontally within each item */
+    text-align: center; /* Ensure text is centered */
+    flex: 1; /* Allows items to grow and shrink, distributing space */
+    min-width: 200px; /* Minimum width for each stat item before wrapping */
+    max-width: 300px; /* Max width for each stat item */
+    padding: 20px; /* Internal padding for each item */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+/* Styling for the large number (e.g., 998k+) */
+.stat-item .stat-number {
+    font-size: 60px; /* Large font size */
+    font-weight: 700; /* Bold */
+    color: #fff; /* White color */
+    margin-bottom: 10px; /* Space below the number */
+}
+
+/* Styling for the descriptive text (e.g., POSTS) */
+.stat-item .stat-description {
+    font-size: 16px;
+    font-weight: 600; /* Medium bold */
+    color: #3f87f5; /* Blue color */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 1.5px; /* Slight letter spacing */
+}
+footer{
+    display: flex;
+    width: 100%;
+    height: 300px;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
+footer p{
+    margin-left: auto;
+    margin-right: 15%;
+    color: #666e76;
+    font-weight: 900;
+}
+footer a{
+    margin-right: 1.5%;
+    text-decoration: none;
+    color: #7d8287;
+    position: relative;
+    left: 100px;
+    font-size: 18px;
+font-weight: 900;}
